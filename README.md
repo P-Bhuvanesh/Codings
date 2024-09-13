@@ -1,2 +1,2 @@
 # Codings
-A collection of some programs
+This repo contains set of programs for the refernces used for later time period.
