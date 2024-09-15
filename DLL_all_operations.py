@@ -34,6 +34,10 @@ class DLL:
         
     def display(self):
         
+        if(self.head == None):
+            print("No nodes to display")
+            return
+        
         last = self.head
         while last:
             if not(last.next):
@@ -45,39 +49,56 @@ class DLL:
     def remove(self, data):
         
         temp = self.head
+
         while temp:
-            if(temp.data == data):
-                if(temp.next == None):
-                    temp.prev.next = None
-                    print(data, " node deleted")
+            if temp.data == data:
+                # If it's the only node
+                if temp.prev is None and temp.next is None:
+                    self.head = None
+                    print(data, "node deleted")
                     return
-                if(temp.prev == None):
+
+                # If it's the first node
+                if temp.prev is None:
                     self.head = temp.next
-                    print(data, " node deleted")
+                    self.head.prev = None  # Fixing prev pointer
+                    print(data, "node deleted")
                     return
-                
+
+                # If it's the last node
+                if temp.next is None:
+                    temp.prev.next = None
+                    print(data, "node deleted")
+                    return
+
+                # If it's a middle node
                 temp.prev.next = temp.next
                 temp.next.prev = temp.prev
-                print(data, "Node deleted")
-                
+                print(data, "node deleted")
+                return
             temp = temp.next
+        print("Node with data", data, "not found in DLL")
             
     def insertAfter(self, data, key):
         nn = Node(key)
         print(f"Inserting node {key}............")
         temp = self.head
-        while temp.next != None:
-            if(temp.data == data):
+
+        while temp:
+            if temp.data == data:
                 nn.next = temp.next
-                temp.next.prev = nn
+                if temp.next is not None:  # If inserting in between nodes
+                    temp.next.prev = nn
                 nn.prev = temp
                 temp.next = nn
                 print(f"Inserted Node after {data}")
                 return
             temp = temp.next
-        temp.next = nn
-        nn.prev = temp
-        print(f"Inserted node {key} at the last as {data} not found in the DLL")
+
+        # If the `data` is not found, insert at the end
+        if temp is None:
+            self.append(key)
+            print(f"Inserted node {key} at the end as {data} was not found in the DLL")
 
 
 dll = DLL()
@@ -92,10 +113,10 @@ dll.display()
 
 dll.search(50)
 
-dll.remove(40)
+dll.remove(20)
 dll.display()
 
-dll.insertAfter(70,1)
+dll.insertAfter(10,1)
 dll.display()
 
 
