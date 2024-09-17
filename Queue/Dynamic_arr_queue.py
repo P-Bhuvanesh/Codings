@@ -9,8 +9,7 @@ class DynamicQueue:
     def dequeue(self):
         if self.isEmpty():
             print("Queue is empty")
-            return
-        
+            return         
         print(f"Dequeued element is {self.queue.pop(0)}")
         
     def display(self):
