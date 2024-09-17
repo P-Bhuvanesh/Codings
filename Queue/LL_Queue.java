@@ -11,8 +11,7 @@ class Node{
 
 class Main{
     
-    private Node rear, front;
-    
+    private Node rear, front;     
     public Main()
     {
         rear = front = null;
@@ -41,10 +40,8 @@ class Main{
         }
         
         int deq_ele = front.data;
-        front = front.next; 
-        
-        if(rear == null) front = null;
-        
+        front = front.next;         
+        if(rear == null) front = null;         
         return deq_ele;
     }
     
