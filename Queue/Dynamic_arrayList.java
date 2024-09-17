@@ -64,8 +64,7 @@ class Main {
         System.out.print("Size of the queue: "+queue.size());
         
         queue.enqueue(40);
-        queue.enqueue(50);
-        
+        queue.enqueue(50);         
         queue.display();
     }
 }
