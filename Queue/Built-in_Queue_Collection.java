@@ -1,5 +1,4 @@
 import java.util.*;
-
 class Main {
 	public static void main(String args[])
 	{
@@ -22,7 +21,7 @@ class Main {
 		System.out.println("Polling operation: "+q1.poll()); // poll() removes the head element
 
 		System.out.println(q1);
-		System.out.println("Remove operation: "+q1.remove(20));
+		System.out.println("Remove operation: "+q1.remove(20));// removes 20 from the queue
 		System.out.println(q1);
 		// System.out.println(q1);
 
