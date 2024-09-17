@@ -15,8 +15,7 @@ class FixedQueue:
         self.queue[self.rear] = data;
         self.size += 1 
         
-    def dequeue(self):
-        
+    def dequeue(self):         
         if self.size == 0:
             print("Queue is empty")
             return
