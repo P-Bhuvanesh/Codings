@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 class Main {
-    private int size = 5;
+    private int size = 5; // Max size
     private String[] keys;
     private String[] values;
     
@@ -11,7 +11,7 @@ class Main {
     }
     
     private int hashFunction(String key) {
-        return key.hashCode() % size;
+        return key.hashCode() % size; // function for hashing
     }
     
     public void insert(String key, String value) {
@@ -22,7 +22,7 @@ class Main {
                 values[index] = value;
                 return;
             }
-            index = (index + 1) % size;
+            index = (index + 1) % size; // Linear probing
         }
         keys[index] = key;
         values[index] = value;
@@ -34,7 +34,7 @@ class Main {
             if (keys[index].equals(key)) {
                 return values[index];
             }
-            index = (index + 1) % size;
+            index = (index + 1) % size; // Linear Probing
         }
         return null;
     }
