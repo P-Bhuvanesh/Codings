@@ -1,0 +1,17 @@
+Time Complexity	Name	Example	Growth Rate
+O(1)	Constant	Accessing an array element by index	Constant; does not grow
+O(log n)	Logarithmic	Binary search	Grows slowly
+O(n)	Linear	Traversing an array	Grows directly with input size
+O(n log n)	Linearithmic	Merge sort	Faster than quadratic
+O(n²)	Quadratic (Polynomial)	Bubble sort, nested loops	Grows fast as input increases
+O(2^n)	Exponential	Brute force algorithms (e.g., TSP)	Grows very fast
+O(n!)	Factorial	Generating all permutations	Grows extremely fast
+
+
+Choosing Algorithms Based on Complexity
+
+O(1): Always the best choice. Use whenever possible.
+O(log n): Very efficient for large datasets, ideal for search algorithms.
+O(n): Manageable for medium datasets, suitable for traversing or linear search.
+O(n log n): The best achievable complexity for comparison-based sorting algorithms.
+O(n²) or worse: Avoid for large datasets, but acceptable for small datasets or when performance isn't critical.
