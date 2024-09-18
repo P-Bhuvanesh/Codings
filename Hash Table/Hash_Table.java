@@ -16,7 +16,7 @@ class Main {
     }
     
     // Insert key-value pair into the hash table
-    public void insert(String key, String value) {// key = "name", value = "Alice"
+    public void insert(String key, String value) { // key = "name", value = "Alice"
         int index = hashFunction(key);// index = 0
         while (keys[index] != null) {
             if (keys[index].equals(key)) {
