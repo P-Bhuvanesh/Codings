@@ -11,7 +11,7 @@ class Main {
     }
     
     private int hashFunction(String key) {
-        return key.hashCode() % size; // function for hashing
+        return key.hashCode() % size; // function for Hashing
     }
     
     public void insert(String key, String value) {
