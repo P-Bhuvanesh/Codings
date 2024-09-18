@@ -16,8 +16,7 @@ class HashTable:
             if pair[0] == key:
                 pair[1] = value
                 return
-        # Otherwise, append the new key-value pair
-        # used chaining i.e separate chaining -> linked list method to avoid collision.
+        # Otherwise, append the new key-value pair used chaining i.e separate chaining -> linked list method to avoid collision.
         self.table[index].append([key, value])
     
     def get(self, key):
