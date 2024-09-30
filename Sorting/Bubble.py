@@ -7,9 +7,7 @@ for i in range(len(l) - 1):
 print(l)
 
 """
-Bubble sort 
-
-bubble sort is that comparing the adjacent element and swaping if the condition trues a<b || a>b 
+Bubble sort : It is that comparing the adjacent element and swaping if the condition trues a<b || a>b 
 
 
 Alternative approach: 
