@@ -1,9 +1,6 @@
 import java.util.*;
-
-
 public class Main
-{
-    
+{     
     static void merge(int[] arr, int low, int mid, int high)
     {
         ArrayList<Integer> temp = new ArrayList<>();
@@ -21,29 +18,23 @@ public class Main
                 temp.add(arr[n2]);
                 n2++;
             }
-        }
-        
+        }         
         while(n1<=mid)
         {
             temp.add(arr[n1]);
             n1++;
-        }
-        
+        }         
         while(n2<=high)
         {
             temp.add(arr[n2]);
             n2++;
-        }
-        
+	}
         System.out.println(temp);
-        
         for(int i=low;i<=high;i++)
         {
             arr[i] = temp.get(i-low);
         }
-        
-    }
-    
+    }    
     static void mergeSort(int[] arr, int st, int end)
     {
         if(st>=end) return;
@@ -51,8 +42,7 @@ public class Main
         mergeSort(arr,st,mid);
         mergeSort(arr,mid+1,end);
         merge(arr,st,mid,end);
-    } 
-    
+    }     
 	public static void main(String[] args) {
 		int arr[] = {30, 24, 14, 90, 56, 71};
 		int n = arr.length;
