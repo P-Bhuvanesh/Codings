@@ -11,7 +11,7 @@ for i in range(len(l)):
 print(l)
 
 """
-For java implementation
+Template implementation for all lang
 
 
 l = [33, 24, 1, 97, 36, 56]
