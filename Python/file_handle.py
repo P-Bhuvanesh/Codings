@@ -14,9 +14,7 @@ def fileHandling() -> None:
     print(f"Number of topics in {fname} is : {topic}")
     """
     fread: str = fhandle.read()
-    print(fread[:10]) # prints out first 10 characters of the file
-
-
+    print(fread[:10]) # prints out first 10 characters of the file 
     
     print(fhandle) # handle varaible is just the wrapper
                    # it does not actually has the contents of the file in it
