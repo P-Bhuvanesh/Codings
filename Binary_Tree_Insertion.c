@@ -17,11 +17,9 @@ void insert(Node** root, int data)
     }
     
     /*
-        FOR BINARY SEARCH Tree
-        
+        FOR BINARY SEARCH Tree         
         // if(data < (*root)->key) insert(&((*root)->left),data);
-        // else if(data > (*root)->key) insert(&((*root)->right),data);
-    
+        // else if(data > (*root)->key) insert(&((*root)->right),data);     
     */
     
     Node** queue = (Node**)malloc(100*sizeof(Node*));
